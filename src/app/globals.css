@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 20% 10%;
+    --foreground: 210 40% 98%;
+    --card: 220 20% 15%;
+    --card-foreground: 210 40% 98%;
+    --popover: 220 20% 10%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 90% 55%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 217 33% 20%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 33% 20%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 210 90% 65%;
+    --accent-foreground: 220 20% 10%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 33% 25%;
+    --input: 217 33% 20%;
+    --ring: 210 90% 60%;
+    --chart-1: 210 90% 55%;
+    --chart-2: 170 80% 45%;
+    --chart-3: 40 90% 55%;
+    --chart-4: 0 80% 60%;
+    --chart-5: 260 85% 65%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    min-height: 100vh;
+  }
+
+  .mouse-follower-background {
+    background: radial-gradient(ellipse at bottom, hsl(var(--primary) / 0.1), hsl(var(--background)) 70%);
+    background-size: 200% 200%;
+    transition: background-position 0.2s ease-out;
+  }
+}
